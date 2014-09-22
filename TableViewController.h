@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TableViewController.h
 //  NewCandy2
 //
 //  Created by Luke Solomon on 9/21/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TableViewController : UITableViewController
 
 @end
-

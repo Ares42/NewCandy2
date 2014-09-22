@@ -10,11 +10,15 @@
 		D5D24C7019CFC3D900603389 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24C6F19CFC3D900603389 /* main.m */; };
 		D5D24C7319CFC3D900603389 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24C7219CFC3D900603389 /* AppDelegate.m */; };
 		D5D24C7619CFC3D900603389 /* NewCandy2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5D24C7419CFC3D900603389 /* NewCandy2.xcdatamodeld */; };
-		D5D24C7919CFC3D900603389 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24C7819CFC3D900603389 /* ViewController.m */; };
 		D5D24C7C19CFC3D900603389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D24C7A19CFC3D900603389 /* Main.storyboard */; };
 		D5D24C7E19CFC3D900603389 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5D24C7D19CFC3D900603389 /* Images.xcassets */; };
 		D5D24C8119CFC3D900603389 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5D24C7F19CFC3D900603389 /* LaunchScreen.xib */; };
 		D5D24C8D19CFC3D900603389 /* NewCandy2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24C8C19CFC3D900603389 /* NewCandy2Tests.m */; };
+		D5D24C9B19CFC46A00603389 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24C9A19CFC46A00603389 /* TableViewController.m */; };
+		D5D24C9E19CFC55700603389 /* Candy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24C9D19CFC55700603389 /* Candy.m */; };
+		D5D24CA219CFCDFC00603389 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24CA119CFCDFC00603389 /* DetailViewController.m */; };
+		D5D24CA519CFE0E100603389 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D24CA419CFE0E100603389 /* MapKit.framework */; };
+		D5D24CA819CFE2F500603389 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24CA719CFE2F500603389 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +38,21 @@
 		D5D24C7119CFC3D900603389 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D5D24C7219CFC3D900603389 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D5D24C7519CFC3D900603389 /* NewCandy2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewCandy2.xcdatamodel; sourceTree = "<group>"; };
-		D5D24C7719CFC3D900603389 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D5D24C7819CFC3D900603389 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D5D24C7B19CFC3D900603389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5D24C7D19CFC3D900603389 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D5D24C8019CFC3D900603389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D5D24C8619CFC3D900603389 /* NewCandy2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewCandy2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D24C8B19CFC3D900603389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5D24C8C19CFC3D900603389 /* NewCandy2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewCandy2Tests.m; sourceTree = "<group>"; };
+		D5D24C9919CFC46A00603389 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
+		D5D24C9A19CFC46A00603389 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
+		D5D24C9C19CFC55700603389 /* Candy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Candy.h; sourceTree = "<group>"; };
+		D5D24C9D19CFC55700603389 /* Candy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Candy.m; sourceTree = "<group>"; };
+		D5D24CA019CFCDFC00603389 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		D5D24CA119CFCDFC00603389 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		D5D24CA419CFE0E100603389 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D5D24CA619CFE2F500603389 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		D5D24CA719CFE2F500603389 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D24CA519CFE0E100603389 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +77,7 @@
 		D5D24C6119CFC3D900603389 = {
 			isa = PBXGroup;
 			children = (
+				D5D24CA419CFE0E100603389 /* MapKit.framework */,
 				D5D24C6C19CFC3D900603389 /* NewCandy2 */,
 				D5D24C8919CFC3D900603389 /* NewCandy2Tests */,
 				D5D24C6B19CFC3D900603389 /* Products */,
@@ -83,14 +96,15 @@
 		D5D24C6C19CFC3D900603389 /* NewCandy2 */ = {
 			isa = PBXGroup;
 			children = (
+				D5D24C7A19CFC3D900603389 /* Main.storyboard */,
 				D5D24C7119CFC3D900603389 /* AppDelegate.h */,
 				D5D24C7219CFC3D900603389 /* AppDelegate.m */,
-				D5D24C7719CFC3D900603389 /* ViewController.h */,
-				D5D24C7819CFC3D900603389 /* ViewController.m */,
-				D5D24C7A19CFC3D900603389 /* Main.storyboard */,
+				D5D24C9919CFC46A00603389 /* TableViewController.h */,
+				D5D24C9A19CFC46A00603389 /* TableViewController.m */,
+				D5D24CA319CFCE0200603389 /* CandyDetail */,
+				D5D24C9F19CFC56100603389 /* Core Data */,
 				D5D24C7D19CFC3D900603389 /* Images.xcassets */,
 				D5D24C7F19CFC3D900603389 /* LaunchScreen.xib */,
-				D5D24C7419CFC3D900603389 /* NewCandy2.xcdatamodeld */,
 				D5D24C6D19CFC3D900603389 /* Supporting Files */,
 			);
 			path = NewCandy2;
@@ -120,6 +134,27 @@
 				D5D24C8B19CFC3D900603389 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D5D24C9F19CFC56100603389 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				D5D24C7419CFC3D900603389 /* NewCandy2.xcdatamodeld */,
+				D5D24C9C19CFC55700603389 /* Candy.h */,
+				D5D24C9D19CFC55700603389 /* Candy.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		D5D24CA319CFCE0200603389 /* CandyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D5D24CA019CFCDFC00603389 /* DetailViewController.h */,
+				D5D24CA119CFCDFC00603389 /* DetailViewController.m */,
+				D5D24CA619CFE2F500603389 /* MapViewController.h */,
+				D5D24CA719CFE2F500603389 /* MapViewController.m */,
+			);
+			name = CandyDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +259,11 @@
 			files = (
 				D5D24C7319CFC3D900603389 /* AppDelegate.m in Sources */,
 				D5D24C7019CFC3D900603389 /* main.m in Sources */,
-				D5D24C7919CFC3D900603389 /* ViewController.m in Sources */,
 				D5D24C7619CFC3D900603389 /* NewCandy2.xcdatamodeld in Sources */,
+				D5D24C9E19CFC55700603389 /* Candy.m in Sources */,
+				D5D24C9B19CFC46A00603389 /* TableViewController.m in Sources */,
+				D5D24CA219CFCDFC00603389 /* DetailViewController.m in Sources */,
+				D5D24CA819CFE2F500603389 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
