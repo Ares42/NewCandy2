@@ -1,20 +1,19 @@
 //
-//  MapViewController.m
+//  ImageViewController.m
 //  NewCandy2
 //
-//  Created by Luke Solomon on 9/21/14.
+//  Created by Luke Solomon on 9/22/14.
 //  Copyright (c) 2014 Luke Solomon. All rights reserved.
 //
 
-#import "MapViewController.h"
-@import MapKit;
+#import "ImageViewController.h"
 
-@interface MapViewController ()
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@interface ImageViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
-@implementation MapViewController
+@implementation ImageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,13 +25,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) viewDidAppear:(BOOL)animated {
+
+- (void) viewWillAppear:(BOOL)animated  {
+    
     [super viewWillAppear:animated];
-    
-    
+    //set the imageView equal to the candy's image
+    self.imageView.image = [UIImage imageWithData:self.candy.image];
+    _imageView.userInteractionEnabled = TRUE;
     
 }
-
 
 /*
 #pragma mark - Navigation

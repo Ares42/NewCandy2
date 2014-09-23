@@ -7,6 +7,9 @@
 //
 
 #import "DetailViewController.h"
+#import "ImageViewController.h"
+#import "MapViewController.h"
+#import "EditCandyViewController.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *candyTitle;
@@ -31,7 +34,34 @@
     
     [super viewWillAppear:animated];
     
+    //set the view's title equal to the candy's title
     self.candyTitle.text = self.candy.name;
+    
+    //set the imageView equal to the candy's image
+    self.candyImage.image = [UIImage imageWithData:self.candy.image];
+    _candyImage.userInteractionEnabled = TRUE;
+    
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+//    DetailViewController *destination = (DetailViewController *)[segue destinationViewController];
+    
+    if ([segue.identifier isEqualToString:@"ViewImage"]){
+        ImageViewController *destination = [segue destinationViewController];
+        destination.candy = self.candy;
+        
+    }
+    
+    else if ([segue.identifier isEqualToString:@"ViewMap"]){
+        MapViewController *mapViewController = [segue destinationViewController];
+        mapViewController.candy = self.candy;
+    }
+    
+    else if ([segue.identifier isEqualToString:@"EditCandy"]){
+        EditCandyViewController *editCandyViewController = [segue destinationViewController];
+        editCandyViewController.candy = self.candy;
+    }
     
 }
 

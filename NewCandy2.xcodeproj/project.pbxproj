@@ -19,6 +19,11 @@
 		D5D24CA219CFCDFC00603389 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24CA119CFCDFC00603389 /* DetailViewController.m */; };
 		D5D24CA519CFE0E100603389 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D24CA419CFE0E100603389 /* MapKit.framework */; };
 		D5D24CA819CFE2F500603389 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24CA719CFE2F500603389 /* MapViewController.m */; };
+		D5D24CAA19CFFCF500603389 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D24CA919CFFCF500603389 /* CoreData.framework */; };
+		D5D24CAC19CFFD3100603389 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D24CAB19CFFD3100603389 /* CoreLocation.framework */; };
+		D5D24CAF19D085B400603389 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24CAE19D085B400603389 /* ImageViewController.m */; };
+		D5D24CB219D08DFE00603389 /* EditCandyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24CB119D08DFD00603389 /* EditCandyViewController.m */; };
+		D5D24CB819D0BDC800603389 /* ChatTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D24CB719D0BDC800603389 /* ChatTableTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,14 @@
 		D5D24CA419CFE0E100603389 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D5D24CA619CFE2F500603389 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		D5D24CA719CFE2F500603389 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		D5D24CA919CFFCF500603389 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D5D24CAB19CFFD3100603389 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D5D24CAD19D085B400603389 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		D5D24CAE19D085B400603389 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		D5D24CB019D08DFD00603389 /* EditCandyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCandyViewController.h; sourceTree = "<group>"; };
+		D5D24CB119D08DFD00603389 /* EditCandyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCandyViewController.m; sourceTree = "<group>"; };
+		D5D24CB619D0BDC800603389 /* ChatTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatTableTableViewController.h; path = ../ChatTableTableViewController.h; sourceTree = "<group>"; };
+		D5D24CB719D0BDC800603389 /* ChatTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatTableTableViewController.m; path = ../ChatTableTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D24CAC19CFFD3100603389 /* CoreLocation.framework in Frameworks */,
+				D5D24CAA19CFFCF500603389 /* CoreData.framework in Frameworks */,
 				D5D24CA519CFE0E100603389 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +92,8 @@
 		D5D24C6119CFC3D900603389 = {
 			isa = PBXGroup;
 			children = (
+				D5D24CAB19CFFD3100603389 /* CoreLocation.framework */,
+				D5D24CA919CFFCF500603389 /* CoreData.framework */,
 				D5D24CA419CFE0E100603389 /* MapKit.framework */,
 				D5D24C6C19CFC3D900603389 /* NewCandy2 */,
 				D5D24C8919CFC3D900603389 /* NewCandy2Tests */,
@@ -101,7 +118,9 @@
 				D5D24C7219CFC3D900603389 /* AppDelegate.m */,
 				D5D24C9919CFC46A00603389 /* TableViewController.h */,
 				D5D24C9A19CFC46A00603389 /* TableViewController.m */,
-				D5D24CA319CFCE0200603389 /* CandyDetail */,
+				D5D24CB619D0BDC800603389 /* ChatTableTableViewController.h */,
+				D5D24CB719D0BDC800603389 /* ChatTableTableViewController.m */,
+				D5D24CA319CFCE0200603389 /* Candy Stuff */,
 				D5D24C9F19CFC56100603389 /* Core Data */,
 				D5D24C7D19CFC3D900603389 /* Images.xcassets */,
 				D5D24C7F19CFC3D900603389 /* LaunchScreen.xib */,
@@ -146,15 +165,27 @@
 			name = "Core Data";
 			sourceTree = "<group>";
 		};
-		D5D24CA319CFCE0200603389 /* CandyDetail */ = {
+		D5D24CA319CFCE0200603389 /* Candy Stuff */ = {
 			isa = PBXGroup;
 			children = (
 				D5D24CA019CFCDFC00603389 /* DetailViewController.h */,
 				D5D24CA119CFCDFC00603389 /* DetailViewController.m */,
+				D5D24CB919D0E8FE00603389 /* 3 clicks */,
+			);
+			name = "Candy Stuff";
+			sourceTree = "<group>";
+		};
+		D5D24CB919D0E8FE00603389 /* 3 clicks */ = {
+			isa = PBXGroup;
+			children = (
+				D5D24CAD19D085B400603389 /* ImageViewController.h */,
+				D5D24CAE19D085B400603389 /* ImageViewController.m */,
 				D5D24CA619CFE2F500603389 /* MapViewController.h */,
 				D5D24CA719CFE2F500603389 /* MapViewController.m */,
+				D5D24CB019D08DFD00603389 /* EditCandyViewController.h */,
+				D5D24CB119D08DFD00603389 /* EditCandyViewController.m */,
 			);
-			name = CandyDetail;
+			name = "3 clicks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +237,7 @@
 				TargetAttributes = {
 					D5D24C6919CFC3D900603389 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 6TK8Q4KD6G;
 					};
 					D5D24C8519CFC3D900603389 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -259,9 +291,12 @@
 			files = (
 				D5D24C7319CFC3D900603389 /* AppDelegate.m in Sources */,
 				D5D24C7019CFC3D900603389 /* main.m in Sources */,
+				D5D24CAF19D085B400603389 /* ImageViewController.m in Sources */,
 				D5D24C7619CFC3D900603389 /* NewCandy2.xcdatamodeld in Sources */,
 				D5D24C9E19CFC55700603389 /* Candy.m in Sources */,
 				D5D24C9B19CFC46A00603389 /* TableViewController.m in Sources */,
+				D5D24CB819D0BDC800603389 /* ChatTableTableViewController.m in Sources */,
+				D5D24CB219D08DFE00603389 /* EditCandyViewController.m in Sources */,
 				D5D24CA219CFCDFC00603389 /* DetailViewController.m in Sources */,
 				D5D24CA819CFE2F500603389 /* MapViewController.m in Sources */,
 			);
