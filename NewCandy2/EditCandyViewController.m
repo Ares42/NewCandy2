@@ -7,6 +7,8 @@
 //
 
 #import "EditCandyViewController.h"
+#import "Candy.h"
+#import "TableViewController.h"
 #import "AppDelegate.h"
 
 @interface EditCandyViewController ()
@@ -14,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *editLongitudeField;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextField *candyName;
+@property (weak, nonatomic) IBOutlet UIButton *takePhotoButton;
+@property (weak, nonatomic) IBOutlet UIButton *selectPhotoButton;
+
+@property (nonatomic,strong) UIImage* image;
 
 @end
 
@@ -38,23 +44,59 @@
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
+    
     [super viewWillDisappear:animated];
     
     self.candy.name = self.candyName.text;
     self.candy.longitude = @([[self.editLongitudeField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] doubleValue]);
     self.candy.latitude = @([[self.editLatitudeField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] doubleValue]);
+    self.image = [UIImage imageWithData:self.candy.image];
     
     [(AppDelegate *)[UIApplication sharedApplication].delegate saveContext];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)takePhotoPressed:(id)sender {
+    
+    UIImagePickerController* imagePickerController = [[UIImagePickerController alloc] init];
+    
+    imagePickerController.delegate = self;
+    imagePickerController.sourceType =  UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentModalViewController:imagePickerController animated:YES];
+    
 }
-*/
+
+- (IBAction)selectPhotoPressed:(id)sender {
+    
+    UIImagePickerController* imagePickerController = [[UIImagePickerController alloc] init];
+    
+    imagePickerController.delegate = self;
+    imagePickerController.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentModalViewController:imagePickerController animated:YES];
+    
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+        didFinishPickingImage:(UIImage *)image
+                  editingInfo:(NSDictionary *)editingInfo
+{
+    
+    // Dismiss the image selection, hide the picker and
+    
+    //show the image view with the picked image
+    
+    [picker dismissModalViewControllerAnimated:YES];
+    
+    
+    //    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,     NSUserDomainMask, YES);
+    //    NSString *documentsDirectory = [paths objectAtIndex:0];
+    //    NSString *savedImagePath = [documentsDirectory stringByAppendingPathComponent:@"savedImage.png"];
+    self.image = image;// imageView is my image from camera
+    self.imageView.image = image;
+    //[imageData writeToFile:savedImagePath atomically:NO];
+    
+}
 
 @end
