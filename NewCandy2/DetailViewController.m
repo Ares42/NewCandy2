@@ -30,7 +30,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) viewWillAppear:(BOOL)animated  {
+- (void) viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
     
@@ -38,10 +38,17 @@
     self.candyTitle.text = self.candy.name;
     
     //set the imageView equal to the candy's image
-    self.candyImage.image = [UIImage imageWithData:self.candy.image];
+    [self.candyImage setImage:([UIImage imageWithData:self.candy.image])];
+    
     _candyImage.userInteractionEnabled = TRUE;
     
 }
+
+//- (void) viewWillDisappear:(BOOL)animated {
+//    
+//    
+//    
+//}
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 

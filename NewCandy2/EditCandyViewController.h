@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Candy.h"
 
-@interface EditCandyViewController : UIViewController
+@interface EditCandyViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (strong, nonatomic) Candy *candy;
 

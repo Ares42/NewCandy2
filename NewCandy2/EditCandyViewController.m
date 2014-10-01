@@ -31,10 +31,13 @@
     self.candyName.text = self.candy.name;
     self.editLatitudeField.text = [NSString stringWithFormat:@"%@", self.candy.latitude];
     self.editLongitudeField.text = [NSString stringWithFormat:@"%@", self.candy.longitude];
+    //self.imageView.image = [UIImage imageWithData:self.candy.image];
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.imageView.image = [UIImage imageWithData:self.candy.image];
     // Do any additional setup after loading the view.
 }
 
@@ -50,10 +53,18 @@
     self.candy.name = self.candyName.text;
     self.candy.longitude = @([[self.editLongitudeField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] doubleValue]);
     self.candy.latitude = @([[self.editLatitudeField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] doubleValue]);
-    self.image = [UIImage imageWithData:self.candy.image];
     
+    
+    NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
+    
+    self.candy.image = imageData;
+
+//        NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"placeholder" ofType:@"png"];
+//        self.candy.image = UIImagePNGRepresentation([UIImage imageWithContentsOfFile:imagePath]);
+//    
+//    
     [(AppDelegate *)[UIApplication sharedApplication].delegate saveContext];
-    
+
 }
 
 - (IBAction)takePhotoPressed:(id)sender {
@@ -63,7 +74,7 @@
     imagePickerController.delegate = self;
     imagePickerController.sourceType =  UIImagePickerControllerSourceTypeCamera;
     
-    [self presentModalViewController:imagePickerController animated:YES];
+    [self presentViewController:imagePickerController animated:YES completion:nil];
     
 }
 
@@ -74,7 +85,9 @@
     imagePickerController.delegate = self;
     imagePickerController.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
     
-    [self presentModalViewController:imagePickerController animated:YES];
+    [self presentViewController:imagePickerController animated:YES completion:nil];
+    
+    
     
 }
 
@@ -83,19 +96,12 @@
                   editingInfo:(NSDictionary *)editingInfo
 {
     
-    // Dismiss the image selection, hide the picker and
-    
-    //show the image view with the picked image
-    
+
     [picker dismissModalViewControllerAnimated:YES];
     
-    
-    //    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,     NSUserDomainMask, YES);
-    //    NSString *documentsDirectory = [paths objectAtIndex:0];
-    //    NSString *savedImagePath = [documentsDirectory stringByAppendingPathComponent:@"savedImage.png"];
-    self.image = image;// imageView is my image from camera
+    NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
+    self.candy.image = imageData;
     self.imageView.image = image;
-    //[imageData writeToFile:savedImagePath atomically:NO];
     
 }
 

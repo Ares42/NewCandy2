@@ -1,19 +1,18 @@
 //
-//  ImageViewController.m
+//  ChatViewController.m
 //  NewCandy2
 //
-//  Created by Luke Solomon on 9/22/14.
+//  Created by Luke Solomon on 10/1/14.
 //  Copyright (c) 2014 Luke Solomon. All rights reserved.
 //
 
-#import "ImageViewController.h"
+#import "ChatViewController.h"
 
-@interface ImageViewController ()
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@interface ChatViewController ()
 
 @end
 
-@implementation ImageViewController
+@implementation ChatViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,24 +22,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-- (void) viewWillAppear:(BOOL)animated  {
-    
-    [super viewWillAppear:animated];
-    
-    //set the imageView equal to the candy's image
-    
-    //self.scrollView = [UIScrollView][[UIImage imageWithData:self.candy.image];
-    
-    _scrollView.userInteractionEnabled = TRUE;
-    
-}
-
-- (void) viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
 }
 
 /*

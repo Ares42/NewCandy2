@@ -7,7 +7,9 @@
 //
 
 #import "MapViewController.h"
+
 @import MapKit;
+
 
 @interface MapViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -18,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,11 +28,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) viewDidAppear:(BOOL)animated {
+- (void) viewWillAppear:(BOOL)animated {
+    
     [super viewWillAppear:animated];
+
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.2, 0.2);
     
+    CLLocationCoordinate2D location = CLLocationCoordinate2DMake([self.candy.latitude doubleValue], [self.candy.longitude doubleValue]);
     
+    MKCoordinateRegion region = MKCoordinateRegionMake(location, span);
     
+    [self.mapView setRegion:region animated:YES];
 }
 
 
